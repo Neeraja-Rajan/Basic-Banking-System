@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(7, 7, 63);
+}
+.header1{
+
+    height: 100vh; /*100% of the view port hght*/
+    background-image: linear-gradient(rgba(73, 66, 131, 0.8),rgba(2, 2, 2, 0.8));
+   
+    background-position: center;
+    position: relative;
+    overflow-y: scroll;
+}
+.logo1{
+    margin-left: 80px;
+    cursor: pointer;
+
+}
+p{
+    
+    width: 50%;
+    color: rgb(221, 178, 221);
+    font-size: large;
+}
+.navbar1{
+    align-items: center;
+    padding: 18px 0px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(221, 178, 221);
+    font-size: 20px;
+}
+.menu-icon{
+    width: 38px;
+    margin-left: 350px;
+    display: none;
+    position: fixed;
+
+
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(221, 178, 221);
+}
+
+/*--------------transfer money---------------*/
+
+.row{
+    background: rgba(2, 19, 61, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(13, 2, 56, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+
+.box .square{
+    position: absolute;
+    background: rgba(38, 3, 95, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(14, 3, 75, 0.1);
+    border: 1px solid rgba(3, 24, 70, 0.5);
+    border-right: 1px solid rgba(79, 75, 136, 0.2);
+    border-bottom: 1px solid rgba(156, 120, 120, 0.2);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+}
+.box .square:nth-child(1){ /*R 1*/
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(2){/*L 1*/
+    top: -50px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+
+button{
+    color: rgb(221, 178, 221);
+    padding: 7px 15px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+   
+    font-size: large;
+  }
+  button:hover{
+    background-color: white;
+    color: #a59c22;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+  }
+.container h2{
+    font-size: 40px;
+    color: rgb(221, 178, 221);
+}
+table{
+    letter-spacing: 2px;
+    color: rgb(221, 178, 221);
+    background: rgba(15, 23, 102, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(68, 66, 155, 0.1);
+    border: 1px solid rgba(38, 46, 117, 0.5);
+    border-right: 1px solid rgba(56, 51, 128, 0.2);
+    border-bottom: 1px solid rgba(12, 19, 85, 0.2);
+    border-radius: 20px;
+
+}
+td{
+    text-align: center;
+    background: rgba(35, 24, 110, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(35, 50, 184, 0.1);
+    border: 1px solid rgba(6, 16, 73, 0.5);
+    border-right: 1px solid rgba(67, 65, 94, 0.2);
+    border-bottom: 1px solid rgba(147, 139, 167, 0.2);
+    border-radius: 10px;
+
+}
+@media only screen and (orientation: portrait){
+	*{
+		letter-spacing: 1px;
+	}
+}
+/*-------------------transaction history------------------*/
+.text-center{
+    color: rgb(221, 178, 221);
+}
+.py-2{
+    color: rgb(221, 178, 221);
+}
+
+/*------------------selected user detail----------------*/
+
+label{
+    color: rgb(221, 178, 221);
+}
+/*------------media query for menu--------------*/
+
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: linear-gradient(rgba(73, 66, 131, 0.8),rgba(2, 2, 2, 0.8));
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        z-index: 3;
+
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: rgb(221, 178, 221);
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+       
+     
+    }
+}
+
+/*------media query for less than 600 screen size------*/
+
+@media only screen and (max-width: 600px){
+    
+    .row{
+        text-align: center;
+    }
+    .col-3{
+        flex-basis: 50%;
+        
+    }
+    .col-3 img{
+        width: 50%;
+    }
+    .small-container{
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .col-3 p{
+        text-align: center;
+        width: 250px;
+        height: 15px;
+        display: inline-block;
+        font-size: 25px;
+        color: rgb(201, 163, 201);
+    }
+    .box {
+        padding-top: 100px;
+        
+    }
+    .box .col-3{
+        text-align: center;
+        padding: 20px 10px;
+        box-shadow: 0 0 20px 0px rgba(235, 223, 223, 0.1);
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+    .box .col-3 img{
+        width: 50px;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+    .box .col-3:hover{
+        transform: translateY(-10px);
+        background: rgba(13, 3, 49, 0.1);
+        backdrop-filter: blur(5px);
+    }
+    p{
+        width: 100%;
+    }
+}
+

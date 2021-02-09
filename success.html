@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(7, 7, 63);
+        }
+        img{
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            -webkit-transform: translate(-50%,-50%); 
+            transform: translate(-50%,-50%) 
+          
+       } 
+       p{
+           text-align: center;
+           color: green;
+           font-size: 40px;
+           font-family: sans-serif;
+       }
+    #myBtn1{
+    color: rgb(221, 178, 221);
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: large;
+    position: fixed; 
+    text-decoration: none;
+            top: 80.5%; 
+            left: 40%; 
+            -webkit-transform: translate(-80.5%,-40%); 
+            transform: translate(-80.5%,-40%) 
+        
+}
+#myBtn2{
+    color: rgb(221, 178, 221);
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: large;
+    position: fixed;
+    text-decoration: none; 
+            top: 81%; 
+            left: 50%; 
+            -webkit-transform: translate(-81%,-50%); 
+            transform: translate(-81%,-50%) 
+
+}
+#myBtn3{
+    color: rgb(221, 178, 221);
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: large;
+    position: fixed;
+    text-decoration: none; 
+            top: 82%; 
+            left: 65%; 
+            -webkit-transform: translate(-82%,-65%); 
+            transform: translate(-82%,-65%) 
+    
+}
+#myBtn1:hover{
+    background-color: white;
+    color: rgb(31, 13, 3);
+    padding: 15px 30px;
+    border-radius: 25px;
+  }#myBtn2:hover{
+    background-color: white;
+    color: rgb(31, 13, 3);
+    padding: 15px 30px;
+    border-radius: 25px;
+  }
+  #myBtn3:hover{
+    background-color: white;
+    color: rgb(31, 13, 3);
+    padding: 15px 30px;
+    border-radius: 25px;
+  }
+  
+
+    </style>
+</head>
+<body>
+   
+    <img src="images/s.gif" target="" ><br>
+    <p>Transaction Successful!</p>
+    <a href="transfermoney.php" id="myBtn1">Transfer</a>
+    <a href="transactionhistory.php" id="myBtn2">History</a>
+    <a href="index.php" id="myBtn3">Back to Home Page</a>
+<!---------------js for toggle menu---------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"
+        }
+        else{
+            MenuItems.style.maxHeight = "0px"
+        }
+    }
+</script>
+</body>
+</html>
